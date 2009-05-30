@@ -111,7 +111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$SDKROOT\" != \"\" ]; then\n\tISYSROOT=\"-isysroot $SDKROOT\"\nfi\n\nmake clean\n./config -openssldir=$BUILD_DIR\nmake CC=$PLATFORM_DEVELOPER_BIN_DIR/gcc-4.0 CFLAG=\"-D_POSIX_C_SOURCE -arch $ARCHS $ISYSROOT\" SHARED_LDFLAGS=\"-arch $ARCHS -dynamiclib\"\n\ncp *.a $BUILT_PRODUCTS_DIR\nexit 0";
+			shellScript = "if [ \"$SDKROOT\" != \"\" ]; then\n\tISYSROOT=\"-isysroot $SDKROOT\"\nfi\n\nmake clean\n./config -openssldir=$BUILD_DIR\nmake CC=$PLATFORM_DEVELOPER_BIN_DIR/gcc-4.0 CFLAG=\"-D_DARWIN_C_SOURCE -arch $ARCHS $ISYSROOT\" SHARED_LDFLAGS=\"-arch $ARCHS -dynamiclib\"\n\ncp *.a $BUILT_PRODUCTS_DIR\nexit 0";
 		};
 /* End PBXShellScriptBuildPhase section */
 
