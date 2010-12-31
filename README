@@ -1,34 +1,58 @@
-== openssl-xcode ==
+openssl-xcode
+=============
 
 This is an XCode project skeleton structure that can be used to build a static 
 libcrypto.a library for use in Mac and iPhone projects. 
 
 It is specifically intended for use in building secure iPhone 
-applications alongside SQLCipher (http://www.zetetic.net/software/sqlcipher).
+applications alongside [SQLCipher](http://www.zetetic.net/software/sqlcipher).
 
 openssl-xcode was developed by Stephen Lombardo at Zetetic LLC.
 
- sjlombardo at zetetic.net
+ sjlombardo at zetetic.net  
  http://www.zetetic.net
+ 
+It was adapted for use with source archives by Michael Tyson of 
+A Tasty Pixel (michael at atastypixel.com)
 
-[ Usage ]
+Usage
+-----
 
 In a normal case you would use it thusly:
 
-1. download the OpenSSL source code directly from
+1. Download the OpenSSL source code directly from
    http://www.openssl.org/source/ 
-2. Tar an unzip the archive and move it to your desired build location
-3. Clone the openssl-xcode git repo to make a local copy
-4. Copy or move openssl.xcodeproj into the OpenSSL source directory
-5. Open openssl.xcodeproj in xcode and initiate a build
+2. Clone the openssl-xcode git repo to make a local copy
+3. Put the downloaded OpenSSL source tar.gz into the same folder
+   as openssl.xcodeproj.  
+   The extracted OpenSSL distribution can also be placed in a folder called 'openssl'
+   within the same folder as openssl.xcodeproj, or just extracted within the
+   same folder as openssl.xcodeproj.
+
+Then, either open openssl.xcodeproj in XCode and initiate a build, or integrate
+it within another project:
+
+1. Drag the openssl.xcodeproj file into your main project
+2. Right-click on your project target, and add openssl.xcodeproj under "Direct
+   Dependencies" on the General tab.
+3. On the Build tab for your project's target, find the "Header Search Paths" 
+   option, and add the path:
+   > `$(SRCROOT)/Library/openssl/build/openssl.build/openssl/include`
+   
+   (Assuming you've put openssl.xcodeproj at the path Library/openssl, and are
+   building from a source tarball)
+4. Expand your target's "Link Binary With Libraries" build stage, and drag
+   libcrypto.a from the openssl.xcodeproj group.
+
 
 This project actually relies on the OpenSSL configure and make
-system to build the libraries. However, it does attemt to automatically
+system to build the libraries. However, it does attempt to automatically
 detect and use the appropriate build settings for arch (i386/ppc/armv6),
-build tools, and SDK directories. This makes it approprate for inclusion
+build tools, and SDK directories. This makes it appropriate for inclusion
 as a project reference into an iPhone application project.
 
-[ License ]
+License
+-------
 
 Copyright (c) 2009, ZETETIC LLC
 All rights reserved.
