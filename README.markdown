@@ -5,15 +5,8 @@ This is an XCode project skeleton structure that can be used to build a static
 libcrypto.a library for use in Mac and iPhone projects. 
 
 It is specifically intended for use in building secure iPhone 
-applications alongside [SQLCipher](http://www.zetetic.net/software/sqlcipher).
-
-openssl-xcode was developed by Stephen Lombardo at Zetetic LLC.
-
- sjlombardo at zetetic.net  
- http://www.zetetic.net
- 
-It was adapted for use with source archives by Michael Tyson of 
-A Tasty Pixel (michael at atastypixel.com)
+applications alongside [SQLCipher](http://sqlcipher.net), 
+but it can easily be used for other applications.
 
 Usage
 -----
@@ -23,11 +16,15 @@ In a normal case you would use it thusly:
 1. Download the OpenSSL source code directly from
    http://www.openssl.org/source/ 
 2. Clone the openssl-xcode git repo to make a local copy
-3. Put the downloaded OpenSSL source tar.gz into the same folder
-   as openssl.xcodeproj.  
-   The extracted OpenSSL distribution can also be placed in a folder called 'openssl'
-   within the same folder as openssl.xcodeproj, or just extracted within the
-   same folder as openssl.xcodeproj.
+3. Either:
+   a. Put the downloaded OpenSSL source tar.gz into the same folder
+      as openssl.xcodeproj.  
+   b. Place an extracted OpenSSL distribution in a folder called 'openssl'
+      within the same folder as openssl.xcodeproj
+   c. Extracted the OpenSSL distribution directly into the same folder 
+      as openssl.xcodeproj.
+   d. Setup a source tree definition in XCode for OPENSSL_SRC pointing the
+      folder containing openssl source code
 
 Then, either open openssl.xcodeproj in XCode and initiate a build, or integrate
 it within another project:
@@ -49,7 +46,9 @@ This project actually relies on the OpenSSL configure and make
 system to build the libraries. However, it does attempt to automatically
 detect and use the appropriate build settings for arch (i386/ppc/armv6),
 build tools, and SDK directories. This makes it appropriate for inclusion
-as a project reference into an iPhone application project.
+as a project reference into an iPhone application project. This project will
+also check to see if the resulting crypto library is newer than the project
+Makefile to avoid time consuming rebuild cycles.
 
 License
 -------
@@ -79,4 +78,10 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Credits
+-------
+
+* openssl-xcode was developed by Stephen Lombardo at Zetetic LLC (sjlombardo at zetetic.net / http://www.zetetic.net) 
+* adapted for use with source archives by Michael Tyson of A Tasty Pixel (michael at atastypixel.com) 
 
