@@ -89,6 +89,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64 armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -96,6 +98,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64 armv6 armv7";
 			};
 			name = Release;
 		};
@@ -111,8 +115,6 @@
 				INSTALL_PATH = /usr/local/lib;
 				PREBINDING = NO;
 				PRODUCT_NAME = crypto;
-				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64 armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -127,8 +129,6 @@
 				INSTALL_PATH = /usr/local/lib;
 				PREBINDING = NO;
 				PRODUCT_NAME = crypto;
-				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64 armv6 armv7";
 				ZERO_LINK = NO;
 			};
 			name = Release;
