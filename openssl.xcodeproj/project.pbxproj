@@ -101,7 +101,7 @@
 				);
 				COPY_PHASE_STRIP = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 			};
@@ -119,7 +119,7 @@
 					i386,
 				);
 				COPY_PHASE_STRIP = YES;
-				SDKROOT = macosx;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 			};
