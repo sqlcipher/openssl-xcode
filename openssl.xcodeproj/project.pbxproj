@@ -92,8 +92,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
 					armv7,
+					armv7s,
 				);
 				"ARCHS[sdk=macosx*]" = (
 					x86_64,
@@ -104,6 +104,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7 armv6 armv7s";
 			};
 			name = Debug;
 		};
@@ -111,8 +112,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
 					armv7,
+					armv7s,
 				);
 				"ARCHS[sdk=macosx*]" = (
 					x86_64,
@@ -122,6 +123,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7 armv6 armv7s";
 			};
 			name = Release;
 		};
