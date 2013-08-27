@@ -104,7 +104,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 x86_64 armv7 armv6 armv7s";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -123,7 +123,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 x86_64 armv7 armv6 armv7s";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7s";
 			};
 			name = Release;
 		};
