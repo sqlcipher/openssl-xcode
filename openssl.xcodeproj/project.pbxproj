@@ -94,6 +94,7 @@
 				"ARCHS[sdk=iphoneos*]" = (
 					armv7,
 					armv7s,
+					arm64,
 				);
 				"ARCHS[sdk=macosx*]" = (
 					x86_64,
@@ -104,7 +105,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 x86_64 armv7 armv7s";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -114,6 +115,7 @@
 				"ARCHS[sdk=iphoneos*]" = (
 					armv7,
 					armv7s,
+					arm64,
 				);
 				"ARCHS[sdk=macosx*]" = (
 					x86_64,
@@ -123,7 +125,7 @@
 				SDKROOT = "$(PLATFORM_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
-				VALID_ARCHS = "i386 x86_64 armv7 armv7s";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7s arm64";
 			};
 			name = Release;
 		};
