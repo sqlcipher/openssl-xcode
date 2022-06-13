@@ -8,6 +8,12 @@ It is specifically intended for use in building secure iPhone
 applications alongside [SQLCipher](http://sqlcipher.net), 
 but it can easily be used for other applications.
 
+## Discontinued
+
+This project is no longer being actively maintained by Zetetic, LLC.
+
+It was originally created to help build SQLCipher for Apple platforms using OpenSSL as the crypto provider. It was no longer needed once Common Crypto became the crypto provider for SQLCipher on these platforms. For help building SQLCipher and including it in an Xcode project, [please see this tutorial](https://www.zetetic.net/sqlcipher/ios-tutorial/).
+
 Usage
 -----
 
